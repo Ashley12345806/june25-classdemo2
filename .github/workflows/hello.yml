@@ -6,4 +6,11 @@ jobs:
     steps:
       - name: Hello World 
         run: echo "Hello, world!"
+
+    say-name:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Name
+        run: echo "My name is Lillian Nakato"
+
      
