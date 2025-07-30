@@ -4,12 +4,12 @@ pipeline{
         VENV = 'venv'
     }
     stages{
-        stage{'Checkout'}{
+        stage('Checkout') {
             steps{
                 git branch: 'main', url: 'https://github.com/Ashley12345806/june25-classdemo2.git' //specify your repository URL here
             }
         }
-        stage{'Setup Virtual Environment'}{
+        stage('Setup Virtual Environment') {
             steps{
                 sh '''python3 -m venv $VENV
                 . $VENV/bin/activate
@@ -17,7 +17,7 @@ pipeline{
                 '''
             }
         }
-        stage{'Run Tests'}{
+        stage('Run Tests') {
             steps{
                 sh '''. $VENV/bin/activate
                 pytest
