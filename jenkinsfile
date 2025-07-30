@@ -5,7 +5,7 @@ pipeline{
     }
     stages{
         stage = {'Checkout'}{
-            steps{git 'https://github.com/Ashley12345806/june25-classdemo2.git' //specify your repository URL here
+            steps{git branch: 'main', url: 'https://github.com/Ashley12345806/june25-classdemo2.git' //specify your repository URL here
             }
         }
         stage = {'Setup Virtual Environment'}{
