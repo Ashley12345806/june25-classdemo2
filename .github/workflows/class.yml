@@ -27,4 +27,4 @@ jobs:
 
       - name: Run Pylint
         run: 
-          pylint june25_classdemo2
+          pylint . --ignore=venv,.pytest_cache
